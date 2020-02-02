@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import SignUp from '../src/Customized/app';
 import FilterableProductTable from '../src/Customized/sampleApp';
-
+import CustomTextInput from '../src/Customized/autoFocus';
 
 
 
@@ -244,5 +244,6 @@ const PRODUCTS = [
 ];
 
 
-ReactDOM.render(<FilterableProductTable products={PRODUCTS}/>, document.getElementById('root'));
+// ReactDOM.render(<FilterableProductTable products={PRODUCTS}/>, document.getElementById('root'));
 
+ReactDOM.render(<CustomTextInput />, document.getElementById('root'));

@@ -22,7 +22,11 @@ class Car extends React.Component {
   changeColor = () =>{
       this.setState({color:"blue"});
   }
-
+componentDidMount() {
+    setTimeout(() => {
+        this.setState({ color: "white" })
+    },1000);
+}
   render(){
       return (
           <div>

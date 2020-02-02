@@ -149,6 +149,11 @@ class MyFormWithMultipleInputs extends React.Component {
     myChangeHandler = (event) =>{
         let nam = event.target.name;
         let val = event.target.value;
+        if (nam === "age") {
+            if (!Number(val)) {
+                alert("Your age must be a number");
+            }
+        }
         this.setState({[nam]: val});
     }
     render() {

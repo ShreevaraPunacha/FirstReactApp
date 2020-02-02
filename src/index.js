@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import SignUp from '../src/Customized/app';
+
 
 
 
@@ -232,5 +234,5 @@ function App() {
 }
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<SignUp />, document.getElementById('root'));
 

@@ -33,7 +33,7 @@ class Car extends React.Component {
     // returning false here, blocks component update once it is rendered. in our case button click does not affect anything
     shouldComponentUpdate(){
 
-        return false;
+        return true;
     }
 
 

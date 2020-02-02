@@ -19,14 +19,25 @@ class Car extends React.Component {
   static getDerivedStateFromProps(props,state){
       return {model: props.newBrand};
   }
+
   changeColor = () =>{
       this.setState({color:"blue"});
   }
-componentDidMount() {
-    setTimeout(() => {
-        this.setState({ color: "white" })
-    },1000);
-}
+
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({ color: "white" })
+        },1000);
+    }
+
+    // returning false here, blocks component update once it is rendered. in our case button click does not affect anything
+    shouldComponentUpdate(){
+
+        return false;
+    }
+
+
+
   render(){
       return (
           <div>

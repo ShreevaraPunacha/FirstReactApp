@@ -36,7 +36,15 @@ class Car extends React.Component {
         return true;
     }
 
+getSnapshotBeforeUpdate(prevProps,prevState){
+    document.getElementById("div1").innerHTML =
+        "Before the update, the favorite was " + prevState.color;
+}
 
+componentDidUpdate(){
+    document.getElementById("div2").innerHTML =
+        "The updated favorite is " + this.state.color;
+}
 
   render(){
       return (
@@ -54,7 +62,13 @@ class Car extends React.Component {
               onClick = {this.changeColor}>
                   Change color
               </button>
+
+              <div id="div1">
+              </div>
+              <div id="div2">
+              </div>
           </div>
+          
       )
   }
 }

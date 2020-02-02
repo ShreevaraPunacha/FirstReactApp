@@ -149,11 +149,13 @@ class MyFormWithMultipleInputs extends React.Component {
     myChangeHandler = (event) =>{
         let nam = event.target.name;
         let val = event.target.value;
+        let err = '';
         if (nam === "age") {
-            if (!Number(val)) {
-                alert("Your age must be a number");
+            if (val != "" && !Number(val)) {
+                err = <strong>Your age must be a number</strong>;
             }
         }
+        this.setState({ errormessage: err });
         this.setState({[nam]: val});
     }
     render() {
@@ -172,6 +174,7 @@ class MyFormWithMultipleInputs extends React.Component {
                     name='age'
                     onChange={this.myChangeHandler}
                 />
+                {this.state.errormessage}
             </form>
         );
     }

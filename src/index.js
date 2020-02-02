@@ -15,6 +15,10 @@ class Car extends React.Component {
             year: 1964
         };
   }
+
+  static getDerivedStateFromProps(props,state){
+      return {model: props.newBrand};
+  }
   changeColor = () =>{
       this.setState({color:"blue"});
   }
@@ -43,5 +47,5 @@ class Car extends React.Component {
 
 
 
-ReactDOM.render(<Car/>, document.getElementById('root'));
+ReactDOM.render(<Car newBrand = "BMW" />, document.getElementById('root'));
 

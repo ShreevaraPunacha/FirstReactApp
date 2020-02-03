@@ -4,7 +4,7 @@ import './index.css';
 import SignUp from '../src/Customized/app';
 import FilterableProductTable from '../src/Customized/sampleApp';
 import CustomTextInput from '../src/Customized/autoFocus';
-
+import MarkdownEditor from '../src/Customized/MarkDownEditor';
 
 
 class Car extends React.Component {
@@ -246,4 +246,4 @@ const PRODUCTS = [
 
 // ReactDOM.render(<FilterableProductTable products={PRODUCTS}/>, document.getElementById('root'));
 
-ReactDOM.render(<CustomTextInput />, document.getElementById('root'));
+ReactDOM.render(<MarkdownEditor />, document.getElementById('root'));
